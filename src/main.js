@@ -5,3 +5,5 @@ import data from './data/pokemon/pokemon.js';
 const name = "prueba";
 console.log(example, data);
 console.log(name);
+const hello = "hello";
+console.log(hello);
