@@ -1,3 +1,5 @@
+// estas funciones son de ejemplo
+
 export const example = (array) => {
   return array.filter((elem) => elem.a);
 };
@@ -161,12 +163,4 @@ export let crearTabla = function (lista) {
   return stringtabla;
 };
 
-/*const objeto = data.athletes;
-let participantes = [];
-for (let i = 0; i < data.athletes; i ++) {
-  participantes[i].name = data.athletes[i].name;
-  participantes[i].age = data.atheles[i].age;
-  participantes[i].height = data.athletes[i].height;
-  participantes[i].weight = data.athletes[i].weight;
-}
-console.log(participantes);*/
+//crearTabla(atletasUnicos);

@@ -8,7 +8,12 @@ console.log(data);
 
 import { atletas } from "./data.js";
 
-import {atletas_tabla, deportista, atletasUnicos, crearTabla,} from "./data.js";
+import {
+  atletas_tabla,
+  deportista,
+  atletasUnicos,
+  crearTabla,
+} from "./data.js";
 
 let jugadores = atletas(data);
 
@@ -31,17 +36,20 @@ document.getElementById("buscar").addEventListener("click", function () {
     //si la posicion esta en -1 no existe el´pais //
 
     if (medalInput === "Gold") {
-      document.getElementById("oro").innerHTML = "Medallas de Oro:" + countries[pos].Gold; // al seleccionar oro me va a devolver  el nyumero de
+      document.getElementById("oro").innerHTML =
+        "Medallas de Oro:" + countries[pos].Gold; // al seleccionar oro me va a devolver  el nyumero de
       return 0;
     }
 
     if (medalInput === "Silver") {
-      document.getElementById("plata").innerHTML = "Medallas de Plata:" + countries[pos].Silver;
+      document.getElementById("plata").innerHTML =
+        "Medallas de Plata:" + countries[pos].Silver;
       return 0;
     }
 
     if (medalInput === "Bronze") {
-      document.getElementById("bronce").innerHTML = "Medallas de Bronce:" + countries[pos].Bronze;
+      document.getElementById("bronce").innerHTML =
+        "Medallas de Bronce:" + countries[pos].Bronze;
       return 0;
     }
 
@@ -74,7 +82,10 @@ for (let i = 0; i < elem.length; i++) {
     console.log(this);
     asigna = document.getElementById(this.id).getAttribute("alt");
     console.log(asigna);
-    document.getElementById("tabla_diciplina").innerHTML = tablaxdiciplina(jugadores, asigna );
+    document.getElementById("tabla_diciplina").innerHTML = tablaxdiciplina(
+      jugadores,
+      asigna
+    );
   });
 }
 let tablaxdiciplina = function (jugadores, asigna) {
@@ -124,13 +135,16 @@ let tablaxdiciplina = function (jugadores, asigna) {
     }
   }
   // console.log(stringtabla);
-  document.getElementById("tabla_diciplina").style.display="block";
+  document.getElementById("tabla_diciplina").style.display = "block";
   window.location.href = "#tabla_diciplina";
+  //document.getElementById("atletastodos").style.display="block";
+
   return stringtabla;
 };
 
 /* --------------------------de la tabla glendy--------------------------------*/
 document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
+
 //asigna = document.getElementById("atletismo").getAttribute("alt")
 /* ------------------------------funciones botones ----------------------------*/
 document.getElementById("btn1").addEventListener("click", Ordenarpornombre);
@@ -150,7 +164,7 @@ function Ordenarpornombre() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display="block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
 
@@ -164,7 +178,7 @@ function OrdenarporGenero() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display= "block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
 
@@ -178,7 +192,7 @@ function OrdenarporDeporte() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display= "block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
 
@@ -192,7 +206,7 @@ function OrdenarporEdad() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display= "block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
 
@@ -206,7 +220,7 @@ function OrdenarporTalla() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display= "block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
 
@@ -220,25 +234,6 @@ function OrdenarporPeso() {
     }
     return 0;
   });
-  document.getElementById("atletastodos").style.display= "block";
+  document.getElementById("atletastodos").style.display = "block";
   document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 }
-
-/*let paises = ["China", "Venezuela"];
-console.log(paises);
-console.log(paises[0]);
-console.log(paises[1]);
-for ( let i = 0; i < paises.length; i++) {
-  medallas(paises[i]);
-}
-console.log(paises);
-
-
-medallas("France");
-//contries();
-
-const athletes = data.athletes;
-const paisess = (({team})=>({team}))(athletes);
-console.log(paisess);
-
-console.log(typeof(athletes));*/
