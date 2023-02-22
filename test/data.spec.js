@@ -2,13 +2,20 @@ import { example, anotherExample } from '../src/data.js';
 
 
 describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
+  it('filter example', () => {
+    // GIVEN - DADO
+    const arrayMock = [
+      {a: true},
+      {a: false},
+    ]
+    
+    // WHEN - CUANDO
+    const filteredArray = example(arrayMock)
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+    // ENTONCES - ENTONCES
+    expect(filteredArray.length).toBe(1)
+    expect(filteredArray).toEqual([{a: true}])
+  })
 });
 
 
