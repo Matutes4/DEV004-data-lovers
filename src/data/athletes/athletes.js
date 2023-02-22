@@ -1,4 +1,4 @@
-export default {
+export default{
   "games": "Olympic Games",
   "year": 2016,
   "season": "summer",

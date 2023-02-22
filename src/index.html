@@ -1,11 +1,250 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <html lang="es"></html>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Olimpiadas RIO 2016</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="./imagenes/logofavi.png"/>
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./imagenes/logoaro.png" alt="texto alternativo">
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#historia">Reseña</a></li>
+          <li><a href="#busqueda-resultado">Conoce</a></li>
+          <li><a href="#actividades">Selecciona una Disciplina</a></li>
+          <li><a href="#tabladejugadores">Tabla de Jugadores</a></li>
+        </ul>
+      </nav>
+      <div class="slider">
+        <ul>
+          <li><span>OLIMPIADAS RIO DE JANEIRO 2016</span><img src="./imagenes/foto24.jpg" alt="texto alternativo"></li>
+          <li><img src="./imagenes/foto22.jpg" alt="texto alternativo"></li>
+          <li><img src="./imagenes/foto20.jpg" alt="texto alternativo"></li>
+          <li><img src="./imagenes/foto15.jpg" alt="texto alternativo"></li>
+        </ul>
+      </div>
+  </header>
+  <section id="historia">
+    <div class="flex-container">
+
+      <div class="img-contenido">
+        
+      </div> 
+      <div class="contenido">
+        <h2>Juegos Olimpicos Rio de Janeiro 2016</h2>
+        <p> Los Juegos Olímpicos de Río de Janeiro son los primeros que se celebrarán en Brasil y también en Sudamérica, fue un evento cargado de emociones y muchas expectativas se celebro en la ciudad de Rio de Janeiro, en Brasil entre el  5  y el  21  de agosto del año  de 2016.</p>
+        <p> En los Juegos Olímpicos participaron mas de 10.500  atletas de 207 países, incluyendo por primera vez una delegación de refugiados y con nuevos miembros como Kosovo y Sudán del Sur. Estos atletas se disputaron mas de 528 medallas, 306 de oro. los atletas se alojaron en la Villa Olímpica, formada por 31 edificios de 17 pisos y que cuenta con 3604 apartamentos . El evento fue cubierto por 25 mil periodistas acreditados y por 7,5 millones de espectadores in situ en Río.
+        </p>
+      </div>
+    </div> 
+  </section>
+      <h1 id="titulo">PAISES CON MEDALLAS</h1>
+  <section class="flex-container" id="busqueda-resultado">
+  
+    <div class="caja" id="caja1">
+      <h1>Paises con medallas</h1>
+      <label for="ordenar">Buscar PAIS en INGLES:</label>
+      <input type="text" id="pais">  
+        <select id="medalla">
+            <option value="">Seleccione una medalla</option>
+            <option value="Gold">Oro</option>
+            <option value="Silver">Plata</option>
+            <option value="Bronze">Bronce</option>
+        </select> 
+  
+    <button id="buscar" type="button">buscar</button>
+
+      
+
+    </div>
+    <div class="caja">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front ">  
+            <img id="img_pregunta" src="./imagenes/foto11.jpg" alt="Paris" style="width:500px;height:300px; border-radius:5px ">
+
+          </div>
+          <div class="flip-box-back">
+            <div id="oro"></div>
+            <div id="plata"></div>
+            <div id="bronce"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   
+
+  </section>
+  <section class="actividades" id="actividades">
+    <div class="informacion">
+      <h2 id="informacion_principal">SELECCIONA CON UN CLICK LA DISCIPLINA </h2>
+      <p> Conoce la informacion de los atletas con las medallas  recibidas respectivamente. </p>
+  </div>
+    <div class="flex-container2">
+    
+      <div class="actividad" id="atletismo" alt="Athletics" >
+          <img src="./imagenes/atletismo.png" alt="logo de atletismo">
+          <h3>atletismo</h3>
+      </div>
+
+      <div class="actividad" id="bagminton"  alt="Badminton">
+          <img src="./imagenes/bagminton.png" alt="logo de bagminton">
+          <h3>Bagminton</h3>
+      </div>
+      <div class="actividad" id="basketball"  alt="Basketball">
+          <img src="./imagenes/basketball.png" alt="logo de Basketball" >
+          <h3>Basketball</h3>
+      </div>
+      <div class="actividad" id="balonmano"  alt="Handball">
+          <img src="./imagenes/balonmano.png" alt="logo de balonmano">
+          <h3>Balonmano</h3>
+      </div>
+      <div class="actividad" id="Boxeo"  alt="Boxing">
+          <img src="./imagenes/boxeo.png" alt="logo de boxeo">
+          <h3>Boxeo</h3>
+      </div>
+      <div class="actividad" id="buceo"  alt="Diving">
+        <img src="./imagenes/buceo.png" alt="logo de buceo">
+        <h3>Buceo</h3>
+    </div>
+      <div class="actividad" id="canotaje"  alt="Canoeing">
+        <img src="./imagenes/canotaje.png" alt="logo de canotaje">
+        <h3>canotaje</h3>
+    </div>
+      <div class="actividad" id="ciclismo"  alt="Cycling">
+          <img src="./imagenes/ciclismo.png" alt="logo de ciclismo">
+          <h3>Ciclismo</h3>
+      </div>
+      <div class="actividad" id="equitacion"  alt="Equestrianism">
+          <img src="./imagenes/equitacion.png" alt="logo de equitacion">
+          <h3>Equitacion</h3>
+      </div>
+      <div class="actividad" id="esgrima"  alt="Fencing">
+        <img src="./imagenes/esgrima.png" alt="logo de esgrima">
+        <h3>Esgrima</h3>
+      </div>
+      <div class="actividad" id="football"  alt="Football">
+        <img src="./imagenes/Football.png" alt="logo de football">
+        <h3>Football</h3>
+      </div>
+      <div class="actividad" id="gimnasia"  alt="Gymnastics">
+        <img src="./imagenes/gimnasia.png" alt="logo de gimnasia">
+        <h3>Gimnasia</h3>
+      </div>
+      <div class="actividad" id="gimnasiaritmica"  alt="Rhythmic Gymnastics">
+        <img src="./imagenes/G ritmica.png" alt="logo de G ritmica">
+        <h3>G ritmica</h3>
+      </div>
+      <div class="actividad" id="gimnasia"  alt="Golf">
+        <img src="./imagenes/Golf.png" alt="logo de golf">
+        <h3>Golf</h3>
+      </div>
+      <div class="actividad" id="hockey"  alt="Hockey" >
+        <img src="./imagenes/hockey.png" alt="logo de hockey">
+        <h3>Hockey</h3>
+      </div>
+      <div class="actividad" id="Judo"  alt="Judo">
+        <img src="./imagenes/Judo.png" alt="logo de Judo">
+        <h3>Judo</h3>
+      </div>
+      <div class="actividad" id="lucha"  alt="Wrestling">
+        <img src="./imagenes/lucha.png" alt="logo de Lucha">
+        <h3>Lucha</h3>
+      </div>
+      <div class="actividad" id="natacion"  alt="Swimming">
+        <img src="./imagenes/natacion.png" alt="logo de natacion">
+        <h3>Natacion</h3>
+      </div>
+      <div class="actividad" id="natacionsincronizada"  alt="Synchronized Swimming">
+        <img src="./imagenes/natacionsincronizada.png" alt="logo de natacion">
+        <h3>N sincronizada</h3>
+      </div>
+      <div class="actividad" id="pesas"  alt="Weightlifting">
+        <img src="./imagenes/pesas.png" alt="logo de Pesas">
+        <h3>Pesas</h3>
+      </div>
+      <div class="actividad" id="pentlatonmoderno"  alt="Modern Pentathlon">
+        <img src="./imagenes/pentlatonmoderno.png" alt="logo de pentlatonmoderno">
+        <h3>Pentlaton M</h3>
+      </div>
+      <div class="actividad" id="poloacuatico"  alt="Water Polo">
+        <img src="./imagenes/poloacuatico.png" alt="logo de Pesas">
+        <h3>Polo acuatico</h3>
+      </div>
+      <div class="actividad" id="remo"  alt="rowing">
+        <img src="./imagenes/remo.png" alt="logo de Remo">
+        <h3>Remo</h3>
+      </div>
+      <div class="actividad" id="Rugby"  alt="Rugby Sevens">
+        <img src="./imagenes/Rugby.png" alt="logo de Rugby">
+        <h3>Rugby</h3>
+      </div>
+      <div class="actividad" id="taekwondo"  alt="Taekwondo">
+        <img src="./imagenes/Taekwondo.png" alt="logo de Taekwondo">
+        <h3>Taekwondo</h3>
+      </div>
+      <div class="actividad" id="tenis"  alt="Tennis" >
+        <img src="./imagenes/tenis.png" alt="logo de Tenis">
+        <h3>Tenis</h3>
+      </div>
+      <div class="actividad" id="tenisdemesa"  alt="Table Tennis">
+        <img src="./imagenes/tenis de mesa.png" alt="logo de Tenis de mesa">
+        <h3>Tenis Mesa</h3>
+      </div>
+      <div class="actividad" id="Triathlon"  alt="Triathlon">
+        <img src="./imagenes/Triatlon.png" alt="logo de Triatlon">
+        <h3>Triathlon</h3>
+      </div>
+      <div class="actividad" id="tiroteo"  alt="Shooting">
+          <img src="./imagenes/tiroteo.png" alt="logo de tiroteo">
+          <h3>Tiroteo</h3>
+      </div>
+      <div class="actividad" id="tiroconarco"  alt="Archery">
+        <img src="./imagenes/tiroconarco.png" alt="logo de tiroconarco">
+        <h3>Tiro arco</h3>
+      </div>
+      <div class="actividad" id="trampolin"  alt="'Trampolining">
+        <img src="./imagenes/tranpolin.jpg" alt="logo de trampolin">
+        <h3>Trampolin</h3>
+      </div>
+      <div class="actividad" id="vela"  alt="Sailing">
+        <img src="./imagenes/vela.png" alt="logo de Vela">
+        <h3>Vela</h3>
+      </div>
+      <div class="actividad" id="volleyball"  alt="Volleyball">
+        <img src="./imagenes/Volleyball.png" alt="logo de Volleyball">
+        <h3>Volleyball</h3>
+      </div>
+      <div class="actividad" id="volleyballplaya"  alt="Beach Volleyball">
+        <img src="./imagenes/Volleyballplaya.png" alt="logo de volleyballplaya">
+        <h3>Volleyball P</h3>
+     </div>
+    </div>
+  </section>
+  <div>
+    <table id="tabla_diciplina" style="display: none;"></table>
+  </div>
+      <section id="tabladejugadores">
+    <div class="nombredeportistas">
+      <h2 id ="nombre_deportista"> TABLA DE JUGADORES</h2>
+      <P>ORDENADOR</P>
+      </div>
+    <button id="btn1"> Ordenar de la A-Z</button>
+    <button id="btn2"> Ordenar por Genero</button>
+    <button id="btn3"> Ordenar por Deporte</button>
+    <button id="btn4"> Ordenar por Edad</button>
+    <button id="btn5"> Ordenar por Altura</button>
+    <button id="btn6"> Ordenar por Peso</button>
+      <table id="atletastodos"></table>
+  </section>
+  <table id="atletastodos"></table>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
