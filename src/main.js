@@ -1,37 +1,38 @@
-//import { example } from './data.js';
-// import data from './data/lol/lol.js';
-
 import data from "./data/athletes/athletes.js";
 
 import { medal } from "./data.js";
-console.log(data);
+
 
 import { atletas } from "./data.js";
 
 import {
-  atletas_tabla,
-  deportista,
+  //atletas_tabla,
+  //deportista,
   atletasUnicos,
   crearTabla,
 } from "./data.js";
 
-let jugadores = atletas(data);
+const jugadores = atletas(data);
 
-console.log(jugadores);
+//console.log(jugadores);
 //atletasConMedallas(data);
 //console.log(atletasConMedallas(data));
 
-let countries = medal(data);
-countries.sort((a, b) => a.pais.localeCompare(b.pais)); // Ordena alfabéticamente por la propiedad "pais"
+const countries = medal(data);
+//console.log(typeof medal);
+//console.log(typeof countries);
+//console.log(countries[0].pais);
 document.getElementById("buscar").addEventListener("click", function () {
   let countryInput = document.getElementById("pais").value;
-  let medalInput = document.getElementById("medalla").value;
+  const medalInput = document.getElementById("medalla").value;
   document.getElementById("oro").innerText = "";
   document.getElementById("plata").innerText = "";
   document.getElementById("bronce").innerText = "";
 
-  console.log(countries);
-  let pos = buscar_pais(countryInput, countries, medalInput); // posicion del pais que que ingreso el usuario //
+  countryInput = countryInput.toLowerCase();
+  countryInput = countryInput[0].toUpperCase() + countryInput.slice(1);
+  //console.log(countryInput);
+  const pos = buscar_pais(countryInput, countries, medalInput); // posicion del pais que que ingreso el usuario //
   if (pos > -1) {
     //si la posicion esta en -1 no existe el´pais //
 
@@ -77,10 +78,10 @@ const elem = document.getElementsByClassName("actividad");
 
 for (let i = 0; i < elem.length; i++) {
   elem[i].addEventListener("click", function () {
-    let asigna;
+    //let asigna;
 
     console.log(this);
-    asigna = document.getElementById(this.id).getAttribute("alt");
+    const asigna = document.getElementById(this.id).getAttribute("alt");
     console.log(asigna);
     document.getElementById("tabla_diciplina").innerHTML = tablaxdiciplina(
       jugadores,
@@ -88,12 +89,12 @@ for (let i = 0; i < elem.length; i++) {
     );
   });
 }
-let tablaxdiciplina = function (jugadores, asigna) {
+const tablaxdiciplina = function (jugadores, asigna) {
   let stringtabla = "";
   stringtabla +=
     "<tr><th>Nombre</th><th>Género</th><th>Deporte</th><th>Edad</th><th>Talla</th><th>Peso</th><th>Oro</th><th>Plata</th><th>Bronce</th></tr>";
-  for (let atle of jugadores) {
-    if (atle.sport == asigna) {
+  for (const atle of jugadores) {
+    if (atle.sport === asigna) {
       let fila = "<tr> <td>";
       fila += atle.name;
       fila += "</td>";

@@ -1,13 +1,3 @@
-// estas funciones son de ejemplo
-
-export const example = (array) => {
-  return array.filter((elem) => elem.a);
-};
-
-export const anotherExample = () => {
-  return "OMG";
-};
-
 export const medal = (data) => {
   //se creo una funcion medal para filtrar la data
   const paises = []; //contante paises con un arreglo para ir guardando los paises que no se repiten
@@ -28,7 +18,6 @@ export const medal = (data) => {
         if (paises[i].pais === pais) {
           //el arreglo va ser igual a pais
           paisIndex = i;
-          break;
         }
       }
 
@@ -51,7 +40,7 @@ export const medal = (data) => {
 };
 
 export const atletas = (data) => {
-  const jugador = []; //se va guarsando la informacion de los jugadores que no se repita //
+  const jugador = []; //se va guardando la informacion de los jugadores que no se repita //
 
   for (let p = 0; p < data.athletes.length; p++) {
     //ciclo repetitivo  que recorre el arreglo data.athletes /indicador de la posicion  en el arreglo/numero de posiciones en el arreglo
@@ -66,7 +55,6 @@ export const atletas = (data) => {
         //el arreglo va ser igual a pais
 
         atletasindex = i;
-        break;
       }
     }
 
@@ -93,7 +81,6 @@ export const atletas = (data) => {
   return jugador; //retorna los paises con su cantidad de medallas.
 };
 /* ----------------------------------------------------------*/
-
 import data from "./data/athletes/athletes.js";
 
 export const atletas_tabla = data.athletes;
@@ -110,7 +97,7 @@ export const deportista = data.athletes.map((atleta) => {
   };
 });
 
-export const atletasUnicos = deportista.filter((atleta, index) => {
+export const atletasUnicos = data.athletes.filter((atleta, index) => {
   //propiedades que no se multiplique//
   const firstIndex = deportista.findIndex((obj) => {
     //traer de su arreglo //
@@ -123,15 +110,17 @@ export const atletasUnicos = deportista.filter((atleta, index) => {
       obj.weight === atleta.weight
     );
   });
-  console.log(firstIndex + " es igual " + index);
+  // console.log(firstIndex + " es igual " + index);
   return firstIndex === index;
 });
 
-export let crearTabla = function (lista) {
+console.log(typeof atletasUnicos);
+
+export const crearTabla = function (lista) {
   let stringtabla = "";
   stringtabla +=
     "<tr><th>Nombre</th><th>Género</th><th>Deporte</th><th>Edad</th><th>Talla</th><th>Peso</th></tr>";
-  for (let atle of lista) {
+  for (const atle of lista) {
     let fila = "<tr> <td>";
     fila += atle.name;
     fila += "</td>";
