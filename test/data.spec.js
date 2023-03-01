@@ -1,6 +1,24 @@
-import { medal, crearTabla, atletas } from '../src/data.js';
-import  {deportista} from '../src/data.js';
-import { atletasUnicos } from '../src/data.js';
+import { medal, crearTabla, atletas, deportista, atletasUnicos } from '../src/data.js';
+
+//npm run import countries from "../src/main.js";
+
+
+/*describe('example', () => {
+  it('filter example', () => {
+    // GIVEN - DADO
+    const arrayMock = [
+      {a: true},
+      {a: false},
+    ]
+    
+    // WHEN - CUANDO
+    const filteredArray = example(arrayMock)
+
+    // ENTONCES - ENTONCES
+    expect(filteredArray.length).toBe(1)
+    expect(filteredArray).toEqual([{a: true}])
+  })
+});*/
 
 
 describe('medal', () => {
@@ -42,6 +60,10 @@ describe('medal', () => {
     expect(typeof testmedal).toBe('object');
   });
 
+
+  // it('resultado', () => {
+  //   expect(countries[0].pais).toBe('Italy');
+  // });
 
 });
 
@@ -131,5 +153,11 @@ describe('atletas', () => {
 
 
 
+/*it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
+  });
+});*/
 
-
+// it('resultado', () => {
+//   expect(countries[0].pais).toBe('Italy');
+// });

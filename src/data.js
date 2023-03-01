@@ -50,7 +50,7 @@ export const medal = (data) => {
 };
 
 export const atletas = (data) => {
-  const jugador = []; //se va guarsando la informacion de los jugadores que no se repita //
+  const jugador = []; //se va guardando la informacion de los jugadores que no se repita //
 
   for (let p = 0; p < data.athletes.length; p++) {
     //ciclo repetitivo  que recorre el arreglo data.athletes /indicador de la posicion  en el arreglo/numero de posiciones en el arreglo
@@ -91,7 +91,6 @@ export const atletas = (data) => {
   return jugador; //retorna los paises con su cantidad de medallas.
 };
 /* ----------------------------------------------------------*/
-
 import data from "./data/athletes/athletes.js";
 
 export const atletas_tabla = data.athletes;
@@ -107,8 +106,7 @@ export const deportista = data.athletes.map((atleta) => { //seleccionar elemento
   };
 });
 
-
-export const atletasUnicos = deportista.filter((atleta, index) => {
+export const atletasUnicos = data.athletes.filter((atleta, index) => {
   //propiedades que no se multiplique//
   const firstIndex = deportista.findIndex((obj) => {
     //traer de su arreglo //
@@ -121,9 +119,11 @@ export const atletasUnicos = deportista.filter((atleta, index) => {
       obj.weight === atleta.weight
     );
   });
-  //(firstIndex + " es igual " + index);
+  // console.log(firstIndex + " es igual " + index);
   return firstIndex === index;
 });
+
+console.log(typeof atletasUnicos);
 
 export const crearTabla = function (lista) {
   let stringtabla = "";
