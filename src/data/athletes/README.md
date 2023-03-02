@@ -48,9 +48,7 @@ filtrar , calcular y ordenar, fueron la base para cumplir con las historias de u
   
   Se realizó un prototipo de alta fidelidad en figma, para ello el siguiente link:  https://www.figma.com/file/CVQTpeW8pjS9wUkOhkcIAs/Untitled?node-id=0%3A1 .
 
-  prototipo de baja fidelidad.
 
- # 5. Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
  
 
