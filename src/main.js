@@ -5,21 +5,17 @@ import { medal } from "./data.js";
 import { atletas } from "./data.js";
 
 import {
-  //atletas_tabla,
-  //deportista,
+  
   atletasUnicos,
   crearTabla,
 } from "./data.js";
 
-//import { deportistas } from "./data.js";
+
 const jugadores = atletas(data);
 
-//console.log(jugadores);
-//atletasConMedallas(data);
-//console.log(atletasConMedallas(data));
 
 const countries = medal(data);
-//countries.sort((a, b) => a.pais.localeCompare(b.pais)); // Ordena alfabéticamente por la propiedad "pais"
+
 document.getElementById("buscar").addEventListener("click", function () {
   let countryInput = document.getElementById("pais").value;
   const medalInput = document.getElementById("medalla").value;
@@ -29,14 +25,14 @@ document.getElementById("buscar").addEventListener("click", function () {
 
   countryInput = countryInput.toLowerCase();
   countryInput = countryInput[0].toUpperCase() + countryInput.slice(1);
-  //console.log(countryInput);
-  const pos = buscar_pais(countryInput, countries, medalInput); // posicion del pais que que ingreso el usuario //
+  
+  const pos = buscar_pais(countryInput, countries, medalInput); 
   if (pos > -1) {
-    //si la posicion esta en -1 no existe el´pais //
+    
 
     if (medalInput === "Gold") {
       document.getElementById("oro").innerHTML =
-        "Medallas de Oro:" + countries[pos].Gold; // al seleccionar oro me va a devolver  el nyumero de
+        "Medallas de Oro:" + countries[pos].Gold; 
       return 0;
     }
 
@@ -56,31 +52,31 @@ document.getElementById("buscar").addEventListener("click", function () {
       `El país ${countryInput} tiene ${countries[pos].Gold} medallas de Oro ${countries[pos].Silver} medallas de plata ${countries[pos].Bronze} medallas de bronce`
     );
   } else {
-    alert("No se encontraron resultados para ese país y medalla"); //si let pos no se encotro el pais arroja esta alerta//
+    alert("No se encontraron resultados para ese país y medalla"); 
   }
 });
 
 function buscar_pais(pais, countries, medalla) {
-  //utiliza el bucle
+  
   let i = 0;
   for (i = 0; i < countries.length; i++) {
-    //country buscar  el pais que el ususrio esta ingresando//recorre el elemento de la lista
+    
     if (countries[i].pais === pais && countries[i][medalla] > 0) {
-      //se comprueba si el nombre del país coincide con el nombre que el usuario ingresó y si el país tiene una cantidad de medallas mayor que cero en la categoría especificada.
+      
       return i;
     }
   }
-  return -1; //no consigue el pais
+  return -1; 
 }
 const elem = document.getElementsByClassName("actividad");
 
 for (let i = 0; i < elem.length; i++) {
   elem[i].addEventListener("click", function () {
-    //let asigna;
+    
 
-    //console.log(this);
+    
     const asigna = document.getElementById(this.id).getAttribute("alt");
-    //console.log(asigna);
+    
     document.getElementById("tabla_diciplina").innerHTML = tablaxdiciplina(
       jugadores,
       asigna
@@ -133,18 +129,18 @@ const tablaxdiciplina = function (jugadores, asigna) {
       stringtabla += fila;
     }
   }
-  //console.log(stringtabla);
+  
   document.getElementById("tabla_diciplina").style.display = "block";
   window.location.href = "#tabla_diciplina";
-  //document.getElementById("atletastodos").style.display="block";
+
 
   return stringtabla;
 };
 
-/* --------------------------de la tabla glendy--------------------------------*/
+
 document.getElementById("atletastodos").innerHTML = crearTabla(atletasUnicos);
 
-//asigna = document.getElementById("atletismo").getAttribute("alt")
+
 /* ------------------------------funciones botones ----------------------------*/
 document.getElementById("btn1").addEventListener("click", Ordenarpornombre);
 document.getElementById("btn2").addEventListener("click", OrdenarporGenero);

@@ -1,68 +1,58 @@
-// estas funciones son de ejemplo
-/*
-export const example = (array) => {
-  return array.filter((elem) => elem.a);
-};
-
-export const anotherExample = () => {
-  return "OMG";
-};
-*/
 export const medal = (data) => {
-  //se creo una funcion medal para filtrar la data
-  const paises = []; //contante paises con un arreglo para ir guardando los paises que no se repiten
+ 
+  const paises = []; 
 
   for (let p = 0; p < data.athletes.length; p++) {
-    //ciclo repetitivo  que recorre el arreglo data.athletes /indicador de la posicion  en el arreglo/numero de posiciones en el arreglo
+    
     if (
       data.athletes[p].medal === "Gold" ||
       data.athletes[p].medal === "Silver" ||
       data.athletes[p].medal === "Bronze"
     ) {
-      //si el contador inicia en la posicion va recorrer toda la data buscando las medalla de oro plata y bronce
-      const pais = data.athletes[p].team; //crea constante con vector pais de una posicion , carga un  arreglo  con el pais, que parte de o//
+     
+      const pais = data.athletes[p].team; 
 
-      let pais_indice = -1; //inicia la variable con -1, guardamos los paises que no se repitan
+      let pais_indice = -1; 
       for (let a = 0; a < paises.length; a++) {
-        //for interno ciclo repetitivo  donde el indice inicia 0, y se va incrementando hasta  que sea menor
+      
         if (paises[a].pais === pais) {
-          //el arreglo va ser igual a pais
+          
           pais_indice = a;
         }
       }
 
       if (pais_indice === -1) {
         paises.push({
-          //inserta un valor en la primera posicion del vector//
-          pais: pais, // que no se repitio //
+          
+          pais: pais, 
           Gold: 0,
           Silver: 0,
           Bronze: 0,
         });
-        pais_indice = paises.length - 1; //se recorre todo el vector en -1/guarda el  numero de paise //
+        pais_indice = paises.length - 1; 
       }
 
-      paises[pais_indice][data.athletes[p].medal]++; // paises se va incrementado
+      paises[pais_indice][data.athletes[p].medal]++; 
     }
   }
 
-  return paises; //retorna los paises con su cantidad de medallas.
+  return paises; 
 };
 
 export const atletas = (data) => {
-  const jugador = []; //se va guardando la informacion de los jugadores que no se repita //
+  const jugador = []; 
 
   for (let p = 0; p < data.athletes.length; p++) {
-    //ciclo repetitivo  que recorre el arreglo data.athletes /indicador de la posicion  en el arreglo/numero de posiciones en el arreglo
+  
     const nombreatleta = data.athletes[p].name;
 
     let atletasindex = -1;
 
     for (let i = 0; i < jugador.length; i++) {
-      //for interno ciclo repetitivo  donde el indice inicia 0, y se va incrementando hasta  que sea menor
+      
 
       if (jugador[i].name === nombreatleta) {
-        //el arreglo va ser igual a pais
+        
 
         atletasindex = i;
       }
@@ -85,17 +75,17 @@ export const atletas = (data) => {
       });
       atletasindex = jugador.length - 1;
 
-      jugador[atletasindex][data.athletes[p].medal]++; // paises se va incrementado
+      jugador[atletasindex][data.athletes[p].medal]++; 
     }
   }
-  return jugador; //retorna los paises con su cantidad de medallas.
+  return jugador; 
 };
 /* ----------------------------------------------------------*/
 import data from "./data/athletes/athletes.js";
 
 export const atletas_tabla = data.athletes;
 
-export const deportista = data.athletes.map((atleta) => { //seleccionar elementos de un array//atleta es el objeto que contiene el string
+export const deportista = data.athletes.map((atleta) => { 
   return {
     name: atleta.name,
     gender: atleta.gender,
@@ -107,9 +97,9 @@ export const deportista = data.athletes.map((atleta) => { //seleccionar elemento
 });
 
 export const atletasUnicos = data.athletes.filter((atleta, index) => {
-  //propiedades que no se multiplique//
+ 
   const firstIndex = deportista.findIndex((obj) => {
-    //traer de su arreglo //
+  
     return (
       obj.name === atleta.name &&
       obj.gender === atleta.gender &&
@@ -119,11 +109,11 @@ export const atletasUnicos = data.athletes.filter((atleta, index) => {
       obj.weight === atleta.weight
     );
   });
-  // console.log(firstIndex + " es igual " + index);
+  
   return firstIndex === index;
 });
 
-console.log(typeof atletasUnicos);
+//console.log(typeof atletasUnicos);
 
 export const crearTabla = function (lista) {
   let stringtabla = "";
@@ -157,8 +147,7 @@ export const crearTabla = function (lista) {
     fila += "</tr>";
     stringtabla += fila;
   }
-  // console.log(stringtabla);
+
   return stringtabla;
 };
-//console.log(atletasUnicos);
-//crearTabla(atletasUnicos);
+
