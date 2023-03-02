@@ -5,6 +5,7 @@ font-family: 'Assistant', sans-serif;
 }
 h1{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
 
 }
 body {
@@ -18,6 +19,14 @@ body {
 }
 
 table {
+  border-collapse: collapse;
+  display: flex;
+  width: 50%;
+  padding: 20px 20px;
+  margin: 50px auto; 
+ } 
+ 
+#tabla_diciplina {
   border-collapse: collapse;
   display: flex;
   width: 50%;
@@ -45,9 +54,9 @@ nav{
   left: 0;
   width: 100%;
   height: 70px!important;
-  background-color: rgba(0, 0, 0, 0); /* hacer el fondo transparente */
+  background-color: rgba(0, 0, 0, 0); 
   line-height: 50px;
-  z-index: 1; /* establecer un valor mayor que el del slider */
+  z-index: 1; 
   background-color: hsla(194, 68%, 94%, 0.301);
 }
 .logo img{
@@ -93,7 +102,7 @@ h1 {
 * {margin: 0; padding: 0; border: 0 none;}
 .slider {
   position: relative; 
-  display: block;/* hacer que el slider sea un elemento relativo */
+  display: block;
   width: 100%;
   height: 600px;
   overflow: hidden;
@@ -147,14 +156,14 @@ span {
 }
 #buscar {
  
-  border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-  padding: 20px; /*espacio alrededor texto*/
-  background-color: #0e0bd1; /*color botón*/
-  color: #ffffff; /*color texto*/
-  text-decoration: none; /*decoración texto*/
-  text-transform: uppercase; /*capitalización texto*/
+  border: 1px solid #2e518b; 
+  padding: 20px; 
+  background-color: #0e0bd1; 
+  color: #ffffff; 
+  text-decoration: none; 
+  text-transform: uppercase; 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 50px; /*bordes redondos*/
+  border-radius: 50px; 
   flex-direction: row-reverse;
   display: flex;
   margin-left: auto;
@@ -163,14 +172,14 @@ span {
   justify-content: center;
  }
  button {
-  border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-  padding: 10px; /*espacio alrededor texto*/
-  background-color:  #0e0bd1; /*color botón*/
-  color: #ffffff; /*color texto*/
-  text-decoration: none; /*decoración texto*/
-  text-transform: uppercase; /*capitalización texto*/
+  border: 1px solid #2e518b; 
+  padding: 10px; 
+  background-color:  #0e0bd1; 
+  color: #ffffff; 
+  text-decoration: none; 
+  text-transform: uppercase; 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 50px; /*bordes redondos*/
+  border-radius: 50px; 
   flex-direction: row-reverse;
 
   margin-left: auto;
@@ -180,13 +189,11 @@ span {
  }
 
 
-
-
  select, input{
-  padding: 10px; /*espacio alrededor texto*/
+  padding: 10px; 
   border: 1px solid #2e518b;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 50px; /*bordes redondos*/
+  border-radius: 50px; 
   flex-direction: row-reverse;
   display: flex;
   margin-left: auto;
@@ -211,8 +218,11 @@ span {
   margin-top: 80px;
   margin-bottom: 50px;
   color: rgb(15, 0, 0);
+<<<<<<< HEAD
   display: flex;
 
+=======
+>>>>>>> 0712ea889548e4d29dbc461a1700f3fc58b40aac
 }
 .flex-container{
   display: flex;
@@ -326,14 +336,29 @@ h3{
   line-height: 50px;
   text-align: center;
   margin: 10px;
-  margin-top: 80px;
+  margin-top: 70px;
   align-items: center;
   justify-content: center;
  }
+ .contenido h2 {
+  width: 100%;
+  height: auto;
+  line-height: normal;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.contenido p1 {
+  width: 100%;
+  height: auto;
+  line-height: normal;
+  text-align: center;
+  margin: 50px 0;
+}
 
  .img-contenido {
-  background-image: url("./imagenes/foto30.jpg");
-  background-size: cover;
+ 
+
   background-repeat: no-repeat;
   border-radius: 10px;
   font-weight: bold;
@@ -344,6 +369,7 @@ h3{
   margin-top: 80px;
   align-items: center;
   justify-content: center;
+  padding: 20px;
  }
  .nombredeportistas h2 {
   text-align: center;
@@ -397,4 +423,39 @@ h3{
     height: 130px;
     margin-right: 400px;
   } 
+  
+  
+  @media (max-width: 980px) {
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+  }
+  .contenido {
+    width: 100%;
+   
+    text-align: center;
+    
+   
+    align-items: center;
+    justify-content: center;
+   }
+
+   #titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: rgb(15, 0, 0);
+    padding-top:10px  10px;
+  }
+  #tabla_diciplina {
+    border-collapse: collapse;
+    display: flex;
+    width: 100%;
+    padding: 70px 70px;
+    margin: 50px auto; 
+   }
+  
+
+}
+
   
