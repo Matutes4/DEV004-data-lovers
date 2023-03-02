@@ -218,11 +218,6 @@ span {
   margin-top: 80px;
   margin-bottom: 50px;
   color: rgb(15, 0, 0);
-<<<<<<< HEAD
-  display: flex;
-
-=======
->>>>>>> 0712ea889548e4d29dbc461a1700f3fc58b40aac
 }
 .flex-container{
   display: flex;
