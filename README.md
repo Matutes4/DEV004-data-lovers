@@ -8,7 +8,7 @@ En los Juegos Olímpicos participaron mas de 10.500 atletas de 207 países, incl
 Los Juegos Olimpicos de Rio de Janeiro del año 2016, fue un evento que marco la historia de los deportes en Brasil, por lo que nos basamos en dicha investigación para el desarrollo de este proyecto; Una página web elaborada para usuarios que desen información de los paises y atletas que participaro en tan recordado evento.
 
 
-# 2. Historias de usiario y sus criterios de aceptación:
+# 2. Historias de usuario y sus criterios de aceptación:
 
 . Historia de usuario N°1:
 
