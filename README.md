@@ -14,7 +14,7 @@ Los Juegos Olimpicos de Rio de Janeiro del año 2016, fue un evento que marco la
 
 Yo como Usuario quiero saber cuantas medallas de oro plata y bronce Ganaron los Paises en las Olimpiadas de Rio de Janeiro 2016. para qué: Para saber especificamente el total de medallas de oro , plata y bronce.
 
- - Muestra 5 secciones para que el usuario obtenga variedad de opciones, (Home, Reseña, Paiese con medallas, selecciona una disciplina, tabla de jugadoes).
+ - Muestra 5 secciones para que el usuario obtenga variedad de opciones, (Home, Reseña, Paises con medallas, selecciona una disciplina, tabla de jugadoes).
 
 - Boton de entrada identificado como "Buscar" la cual esta unido con un imput y un selector de opciones que permiten conocer el calculo de medallaz de oro, plata y bronce por pais.
 
@@ -28,7 +28,7 @@ Yo como Usuario deseo ver información de los usuarios por disciplina. para qué
 
 .  Historia de usuario N°3:
 
-Yo como Usuario quiero poder ordenar la información de los atletas de manera ascendente y descendente para qué: Para permitirse manipular y consumir la información de manera ordenada.
+Yo como Usuario quiero poder ordenar la información de los atletas de manera ascendente y descendente para qué: Para permitir manipular y consumir la información de manera ordenada.
 
  - Se diseñaron botones que ordenan la data de los atletas (nombre, género, Deporte, Edad, Talla, Peso).
 
